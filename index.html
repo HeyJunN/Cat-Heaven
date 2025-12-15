@@ -3,8 +3,137 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./img/logo.svg">
+    <link rel="icon" href="./img/logo.svg" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>고양이 천국</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>
+        <a href="#">
+          <img src="./img/logo.svg" alt="호두 홈" />
+        </a>
+      </h1>
+      <button type="button" class="menu-toggle-btn" aria-label="메뉴 열기">
+        <img src="./img/menu.svg" alt="" />
+      </button>
+      <nav class="nav-bar">
+        <ul class="menu-list">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Support</a></li>
+          <li><button type="button" class="download-btn">Download</button></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-text-group">
+          <h2>Lorem Ipsum is simply dummy text of the printing and</h2>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown
+          </p>
+          <button type="button" class="download-btn">Download</button>
+        </div>
+        <figure class="hero-img">
+          <img src="./img/box-cat.png" alt="박스를 쓴 고양이" />
+        </figure>
+      </section>
+      <section class="about-feature">
+        <img src="./img/img_4.jpg" alt="누워있는 고양이" />
+        <div class="about-text-group">
+          <h2>
+            Lorem Ipsum is simply dummy text of the printing and dummy text
+          </h2>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+        </div>
+      </section>
+      <section class="gallery-feature">
+        <div class="gallery-top-text-group">
+          <h2>dummy text of the printing and dummy</h2>
+          <p>
+            Lorem Ipsum is simply
+            <strong class="highlight">dummy text</strong> of the printing and
+            typesetting industry. Lorem Ipsum has been the industry's standard
+            dummy text ever since the 1500s, when an unknown
+          </p>
+        </div>
+        <figure class="gallery-scroll" aria-label="고양이들의 일상 갤러리">
+          <img src="./img/img_1.jpg" alt="캣타워에 있는 고양이" />
+          <img src="./img/img_2.jpg" alt="벽을 바라보는 고양이" />
+        </figure>
+        <div class="gallery-bottom-text-group">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown Ipsum is simply dummy text of
+            the printing and typesetting industry.
+          </p>
+          <button type="button" class="learn-more-btn">Learn More</button>
+        </div>
+      </section>
+      <section class="subscribe">
+        <div class="subs-text-group">
+          <h2>Subscribe to our Blog post</h2>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+          </p>
+        </div>
+        <form action="#" method="get">
+          <input
+            type="email"
+            placeholder="Enter your e-mail address"
+            required
+          />
+          <button type="submit" id="showThanksBtn" class="subs-btn">
+            Subscribe
+          </button>
+        </form>
+      </section>
+    </main>
+    <dialog id="ThanksDialog" class="thanks-modal">
+      <img src="./img/cat-subscribe.png" alt="고양이 얼굴" />
+      <h2>Thank you!</h2>
+      <p>Lorem Ipsum is simply dummy text of the printing industry.</p>
+      <form method="dialog">
+        <button type="submit" class="thanks-btn">OK! I Love HODU</button>
+      </form>
+    </dialog>
+    <footer>
+      <a href="#">
+        <img src="./img/logo.png" alt="호두 로고" />
+      </a>
+      <section class="sns-links">
+        <ul>
+          <li>
+            <a href="#"><img src="./img/blog.svg" alt="Blog" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./img/instagram.svg" alt="Insta" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./img/facebook.svg" alt="Facebook" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./img/youtube.svg" alt="Youtube" /></a>
+          </li>
+        </ul>
+      </section>
+      <section class="quick-links">
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Terms of Use</a></li>
+        </ul>
+      </section>
+    </footer>
+  </body>
 </html>
