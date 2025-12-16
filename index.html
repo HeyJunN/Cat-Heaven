@@ -103,7 +103,9 @@
       <h2>Thank you!</h2>
       <p>Lorem Ipsum is simply dummy text of the printing industry.</p>
       <form method="dialog">
-        <button type="submit" class="thanks-btn">OK! I Love HODU</button>
+        <button type="submit" id="closeBtn" class="thanks-btn">
+          OK! I Love HODU
+        </button>
       </form>
     </dialog>
     <footer>
@@ -135,5 +137,18 @@
         </ul>
       </section>
     </footer>
+    <script>
+      const dialog = document.getElementById("ThanksDialog");
+      const showThanksBtn = document.getElementById("showThanksBtn");
+      const closeBtn = document.getElementById("closeBtn");
+
+      showThanksBtn.addEventListener("click", () => {
+        dialog.showModal();
+      });
+
+      closeBtn.addEventListener("click", () => {
+        dialog.close();
+      });
+    </script>
   </body>
 </html>
