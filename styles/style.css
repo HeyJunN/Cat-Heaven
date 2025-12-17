@@ -51,7 +51,7 @@
 }
 
 :root {
-  --color-primiary: #f2e9d8;
+  --color-primary: #f2e9d8;
   --color-secondary: #d97652;
   --color-third: #263140;
   --color-text: #000;
@@ -87,3 +87,5 @@ footer {
   color: var(--color-placeholder);
   font-size: 1.4rem;
 }
+
+/* 모바일 버전 */
