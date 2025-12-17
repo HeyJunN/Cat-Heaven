@@ -184,3 +184,36 @@ main {
   height: 36.2rem;
   margin: 3.2rem auto 0;
 }
+
+.about-feature {
+  padding: 4rem 3.2rem 6rem;
+}
+
+.about-feature img {
+  display: block;
+  width: 100%;
+  max-width: 32.6rem;
+  height: 19rem;
+  object-fit: cover;
+  object-position: center 35%;
+  border-radius: 1.8rem;
+  margin: 0 auto;
+}
+
+.about-text-group {
+  margin-top: 3.2rem;
+  text-align: left;
+  max-width: 32.6rem;
+}
+
+.about-text-group h3 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 3.2rem;
+  margin-bottom: 1.6rem;
+  word-break: keep-all;
+}
+
+.about-text-group p {
+  line-height: 2.2rem;
+}
