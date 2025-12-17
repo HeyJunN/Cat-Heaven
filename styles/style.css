@@ -124,3 +124,63 @@ h1 a img {
 .nav-bar {
   display: none;
 }
+
+body {
+  padding-top: 7.6rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero {
+  background-color: var(--color-primary);
+  width: 100%;
+  height: auto;
+  padding: 4rem 3.2rem 0rem;
+  text-align: center;
+}
+
+.hero-text-group h3 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 3.2rem;
+  max-width: 27.54rem;
+  height: 9.6rem;
+  margin: 0 auto 2rem;
+  word-break: keep-all;
+}
+
+.hero-text-group p {
+  line-height: 2.2rem;
+  margin: 0 2.53rem;
+}
+
+.download-btn {
+  margin: 2rem auto 0;
+  display: block;
+  max-width: 11.9rem;
+  height: 4rem;
+  padding: 1rem 2.4rem;
+  background-color: var(--color-secondary);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 4rem;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.download-btn:hover {
+  opacity: 0.9;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  max-width: 20.55rem;
+  height: 36.2rem;
+  margin: 3.2rem auto 0;
+}
