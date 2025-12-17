@@ -71,9 +71,13 @@ body {
 }
 
 header {
-  background-color: var(--color-primiary);
+  background-color: var(--color-primary);
   color: var(--color-text);
   font-size: 1.4rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 main {
@@ -89,3 +93,34 @@ footer {
 }
 
 /* 모바일 버전 */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.4rem 2rem;
+  height: 7.6rem;
+}
+
+h1 a {
+  display: block;
+}
+
+h1 a img {
+  width: 9.2rem;
+  height: 2.8rem;
+}
+
+.menu-toggle-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle-btn img {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.nav-bar {
+  display: none;
+}
