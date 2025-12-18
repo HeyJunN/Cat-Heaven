@@ -15,15 +15,30 @@
           <img src="./img/logo.svg" alt="호두 홈" />
         </a>
       </h1>
-      <button type="button" class="menu-toggle-btn" aria-label="메뉴 열기">
+      <button
+        type="button"
+        class="menu-toggle-btn"
+        id="openMenuBtn"
+        aria-label="메뉴 열기"
+      >
         <img src="./img/menu.svg" alt="" />
       </button>
-      <nav class="nav-bar">
+      <nav class="nav-bar" id="navBar">
+        <button
+          tpye="button"
+          class="close-btn"
+          id="closeMenuBtn"
+          aria-label="메뉴 닫기"
+        >
+          <img src="./img/arrow-right.svg" alt="뒤로 가기" />
+        </button>
         <ul class="menu-list">
           <li><a href="#">HOME</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Support</a></li>
-          <li><button type="button" class="download-btn">Download</button></li>
+          <li>
+            <button type="button" class="nav-download-btn">Download</button>
+          </li>
         </ul>
       </nav>
     </header>
