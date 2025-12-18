@@ -1,3 +1,9 @@
+/* 리사이즈 중 애니메이션 방지 */
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
+
 @font-face {
   font-family: "SpokaHanSansNeo";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Thin.woff")
@@ -100,11 +106,16 @@ footer {
 
 /* 모바일 버전 */
 header {
+  padding: 2.4rem 2rem;
+  height: 7.6rem;
+}
+
+.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.4rem 2rem;
-  height: 7.6rem;
+  width: 100%;
+  height: 100%; /* 헤더 높이만큼 꽉 채움 */
 }
 
 h1 a {
@@ -272,6 +283,7 @@ main {
   object-position: center 35%;
   border-radius: 1.8rem;
   margin: 0 auto;
+  box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.25);
 }
 
 .about-text-group {
@@ -783,5 +795,48 @@ footer > a img {
     margin: 0;
 
     min-width: 30rem;
+  }
+
+  .about-feature {
+    display: flex;
+    flex-direction: row; /* 이미지(왼) - 텍스트(오) */
+    justify-content: center;
+    align-items: center;
+
+    gap: 11rem;
+
+    width: 100%;
+    max-width: 128rem;
+    margin: 0 auto;
+
+    padding: 8rem auto 11rem;
+  }
+
+  .about-feature img {
+    /* Flex 설정: 줄어들 순 있지만(1), 억지로 늘어나지 않게(0), 기본 크기(auto) */
+    flex: 0 1 auto;
+    width: 100%;
+    max-width: 66rem;
+    height: auto;
+    aspect-ratio: 660/390;
+    border-radius: 3rem;
+    margin: 0;
+  }
+
+  .about-text-group {
+    flex: 0 1 auto;
+    width: 100%;
+    max-width: 51rem;
+    margin: 0;
+    text-align: left;
+  }
+
+  .about-text-group h3 {
+    font-size: 3.6rem;
+    line-height: 4.8rem;
+    margin-bottom: 3.6rem;
+  }
+  .about-text-group p {
+    font-size: 1.6rem;
   }
 }
