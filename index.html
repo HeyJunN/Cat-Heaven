@@ -10,54 +10,58 @@
   </head>
   <body>
     <header>
-      <h1>
-        <a href="#">
-          <img src="./img/logo.svg" alt="호두 홈" />
-        </a>
-      </h1>
-      <button
-        type="button"
-        class="menu-toggle-btn"
-        id="openMenuBtn"
-        aria-label="메뉴 열기"
-      >
-        <img src="./img/menu.svg" alt="" />
-      </button>
-      <nav class="nav-bar" id="navBar">
+      <div class="header-container">
+        <h1>
+          <a href="#">
+            <img src="./img/logo.svg" alt="호두 홈" />
+          </a>
+        </h1>
         <button
-          tpye="button"
-          class="close-btn"
-          id="closeMenuBtn"
-          aria-label="메뉴 닫기"
+          type="button"
+          class="menu-toggle-btn"
+          id="openMenuBtn"
+          aria-label="메뉴 열기"
         >
-          <img src="./img/arrow-right.svg" alt="뒤로 가기" />
+          <img src="./img/menu.svg" alt="" />
         </button>
-        <ul class="menu-list">
-          <li><a href="#">HOME</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Support</a></li>
-          <li>
-            <button type="button" class="nav-download-btn">Download</button>
-          </li>
-        </ul>
-      </nav>
+        <nav class="nav-bar" id="navBar">
+          <button
+            tpye="button"
+            class="close-btn"
+            id="closeMenuBtn"
+            aria-label="메뉴 닫기"
+          >
+            <img src="./img/arrow-right.svg" alt="뒤로 가기" />
+          </button>
+          <ul class="menu-list">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Support</a></li>
+            <li>
+              <button type="button" class="nav-download-btn">Download</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
       <section class="hero">
         <h2 class="sr-only">호두 소개</h2>
-        <div class="hero-text-group">
-          <h3>
-            행운의 반려묘 <br />고양이 호두를 다운로드를 통해 분양 시키세요 !!
-          </h3>
-          <p>
-            이 호두는 백엔드 개발자 뮤라님에서 최초로 시작되어 일년에 한바퀴를
-            돌면서 받는 사람에게 행운을 주었고 지금은 당신에게로 옮겨진 이
-            호두는 4일 안에 당신 곁을 떠나야 합니다. 이 호두를 행운이 필요한
-            사람에게 보내 주셔야 합니다.
-          </p>
-          <button type="button" class="download-btn">Download</button>
+        <div class="hero-container">
+          <div class="hero-text-group">
+            <h3>
+              행운의 반려묘 <br />고양이 호두를 다운로드를 통해 분양 시키세요 !!
+            </h3>
+            <p>
+              이 호두는 백엔드 개발자 뮤라님에서 최초로 시작되어 일년에 한바퀴를
+              돌면서 받는 사람에게 행운을 주었고 지금은 당신에게로 옮겨진 이
+              호두는 4일 안에 당신 곁을 떠나야 합니다. 이 호두를 행운이 필요한
+              사람에게 보내 주셔야 합니다.
+            </p>
+            <button type="button" class="download-btn">Download</button>
+          </div>
+          <img src="./img/box-cat.png" alt="박스를 쓴 고양이" />
         </div>
-        <img src="./img/box-cat.png" alt="박스를 쓴 고양이" />
       </section>
       <section class="about-feature">
         <h2 class="sr-only">호두가 좋아하는 것</h2>

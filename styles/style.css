@@ -651,7 +651,24 @@ footer > a img {
 @media screen and (min-width: 769px) {
   header {
     height: 10.2rem;
-    padding: 2.5rem 32rem;
+    padding: 0;
+
+    justify-content: center;
+    width: 100%;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    max-width: 128rem;
+
+    height: 100%;
+    margin: 0 auto;
+
+    padding: 0 4rem;
   }
 
   h1 a img {
@@ -700,5 +717,71 @@ footer > a img {
     height: 5.2rem;
     padding: 1.5rem 3rem;
     font-size: 1.6rem;
+  }
+
+  body {
+    padding-top: 10.2rem;
+  }
+
+  .hero {
+    padding: 0;
+    display: block;
+    margin: 0;
+  }
+
+  .hero-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 13.1rem;
+
+    width: 100%;
+    max-width: 128rem;
+    margin: 0 auto;
+    padding: 0 4rem;
+  }
+
+  .hero-text-group {
+    flex: 1;
+    text-align: left;
+    /* 최소 너비는 없애거나 아주 작게 잡아서 겹침 방지 */
+    min-width: 35.8rem;
+  }
+
+  .hero-text-group h3 {
+    font-size: 4.8rem;
+    line-height: 6.4rem;
+    /* 내용물만큼 늘어나게 둠 */
+    height: auto;
+    max-width: 100%;
+    margin: 0 0 4rem 0;
+  }
+
+  .hero-text-group p {
+    font-size: 1.6rem;
+    list-style: 2.4rem;
+    margin: 0 0 4rem 0;
+  }
+
+  .download-btn {
+    margin: 0; /* 왼쪽 정렬 */
+    max-width: 14.1rem;
+    height: 5.2rem;
+    padding: 1.5rem 3rem;
+    font-size: 1.6rem;
+  }
+
+  .hero img {
+    /* 텍스트와 균형 맞추기 */
+    flex: 1;
+    width: 100%;
+    max-width: 41.5rem; /* 너무 커지는 것 방지 */
+
+    /* 높이 자동! 비율 유지 */
+    height: auto;
+    margin: 0;
+
+    min-width: 30rem;
   }
 }
