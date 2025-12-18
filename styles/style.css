@@ -965,4 +965,47 @@ footer > a img {
     font-size: 1.6rem;
     flex-shrink: 0;
   }
+
+  footer {
+    grid-template-columns: none;
+    grid-template-rows: none;
+    row-gap: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 4.5rem 32rem;
+  }
+
+  footer::before {
+    top: -34rem;
+    height: 34rem;
+    background-size: cover;
+  }
+
+  footer > a img {
+    width: 22.6rem;
+    height: auto;
+  }
+
+  .sns-links {
+    margin: 0;
+  }
+
+  .sns-links ul {
+    gap: 2rem;
+  }
+
+  .sns-links img {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .quick-links {
+    display: none;
+  }
 }
