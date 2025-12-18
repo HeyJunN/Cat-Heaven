@@ -662,6 +662,22 @@ footer::before {
   color: var(--color-secondary);
 }
 
+.scroll-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 2.3rem;
+  right: 2.4rem;
+  z-index: 999;
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  opacity: 0; /* JS로 페이드인 효과 */
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none; /* 안 보일 땐 클릭 불가 */
+}
+
 /* 데스크탑 버전 (796px 이상) */
 @media screen and (min-width: 769px) {
   header {
@@ -1067,5 +1083,32 @@ footer::before {
 
   .quick-links {
     display: none;
+  }
+
+  .scroll-top-btn {
+    display: block;
+  }
+
+  .scroll-top-btn {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .scroll-top-btn img {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .scroll-top-btn.scrolling img {
+    animation: spin 0.5s linear infinite; /* 0.5초마다 한 바퀴, 무한 반복 */
   }
 }
