@@ -898,4 +898,71 @@ footer > a img {
 
     flex-shrink: 0;
   }
+
+  .subscribe {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    max-width: 128rem;
+    margin: 0 auto 24.4rem;
+    padding: 5rem 6rem;
+
+    border-radius: 3rem;
+  }
+
+  .subs-text-group {
+    max-width: 49rem;
+    margin: 0 14rem 0 0;
+  }
+
+  .subs-text-group h3 {
+    font-size: 3.6rem;
+    line-height: 4.8rem;
+    margin: 0 0 1.4rem 0;
+  }
+
+  .subs-text-group p {
+    margin: 0;
+  }
+
+  .subscribe form {
+    flex-direction: row;
+
+    position: relative;
+
+    width: auto; /* 내용물만큼만 차지 */
+    flex: 1; /* 남은 공간 차지하되 */
+    max-width: 53rem; /* 폼 전체 너비 제한 (입력창 + 버튼) */
+
+    gap: 0;
+  }
+
+  .subscribe input[type="email"] {
+    flex: 1; /* 입력창이 남은 공간 다 차지 */
+    width: 100%;
+    height: 6rem;
+    padding: 1.9rem 27rem 1.9rem 6.3rem;
+
+    font-size: 1.6rem;
+    background-position: 2.3rem center;
+    background-size: 2.4rem;
+  }
+
+  .subs-btn {
+    position: absolute;
+    top: 50%;
+    right: 0.5rem;
+    transform: translateY(-50%);
+
+    margin: 0;
+    width: auto;
+    max-width: 13.8rem;
+    height: 5rem;
+    padding: 1.5rem 3rem;
+    font-size: 1.6rem;
+    flex-shrink: 0;
+  }
 }
