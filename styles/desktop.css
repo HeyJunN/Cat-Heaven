@@ -111,7 +111,7 @@
 
   .hero-text-group p {
     font-size: 1.6rem;
-    list-style: 2.4rem;
+    line-height: 2.4rem;
     margin: 0 0 4rem 0;
   }
 
@@ -148,7 +148,7 @@
     max-width: 128rem;
     margin: 0 auto;
 
-    padding: 8rem auto 11rem;
+    padding: 8rem 8rem 11rem;
   }
 
   .about-feature img {
@@ -167,13 +167,13 @@
     width: 100%;
     max-width: 51rem;
     margin: 0;
-    text-align: left;
   }
 
   .about-text-group h3 {
     font-size: 3.6rem;
     line-height: 4.8rem;
     margin-bottom: 3.6rem;
+    text-align: center;
   }
   .about-text-group p {
     font-size: 1.6rem;
