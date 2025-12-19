@@ -63,6 +63,14 @@
   --color-text: #000;
   --color-placeholder: #767676;
   --color-bg: #fff;
+  /* 간격을 나중에 중간에 끼워 넣기 편하게 설계 */
+  --z-minus: -1; /* 배경 장식용 */
+  --z-default: 1; /* 일반 컨텐츠 중 포지셔닝이 필요한 경우 */
+  --z-content-priority: 50; /* 중요 콘텐츠용 */
+  --z-fixed: 100; /* 헤더 (Sticky/Fixed) */
+  --z-floating: 200; /* 탑 버튼 등 떠다니는 요소 */
+  --z-nav: 500; /* 모바일 네비게이션 (헤더를 덮어야 함) */
+  --z-modal: 1000; /* 모달, 팝업 (최상위) */
 }
 
 html {
@@ -84,7 +92,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 9999;
+  z-index: var(--z-fixed);
 }
 
 main {
@@ -147,8 +155,7 @@ h1 a img {
   height: 100vh;
   background-color: var(--color-third);
   box-shadow: -0.2rem 0 1rem rgba(0, 0, 0, 0.1); /* 그림자 효과 */
-  z-index: 10000; /* 맨 위에 뜨도록 */
-
+  z-index: var(--z-nav);
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
   padding: 2.2rem;
@@ -431,12 +438,11 @@ main {
   background-color: var(--color-third);
   max-width: 32.6rem;
   margin: 0 auto 15.8rem;
-
   position: relative;
-  z-index: 2;
+  z-index: var(--z-content-priority);
 }
 
-.subs-text-group h3 {
+.subs-text-group h2 {
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 3.2rem;
@@ -559,8 +565,7 @@ main {
 
 footer {
   position: relative;
-  z-index: 1;
-
+  z-index: var(--z-default);
   padding: 3rem 2rem 2.4rem;
 }
 
@@ -581,8 +586,7 @@ footer {
 footer::before {
   content: "";
   position: absolute;
-  z-index: -1;
-
+  z-index: var(--z-minus);
   top: -24rem;
   left: 0;
   width: 100%;
@@ -667,7 +671,7 @@ footer::before {
   position: fixed;
   bottom: 2.3rem;
   right: 2.4rem;
-  z-index: 999;
+  z-index: var(--z-floating);
 
   background: transparent;
   border: none;
