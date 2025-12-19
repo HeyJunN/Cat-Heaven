@@ -112,11 +112,24 @@ scrollTopBtn.addEventListener('click', () => {
 
 지속적인 캠페인 운영과 향후 유지보수를 고려하여 코드의 구조를 체계화하고 일관된 규칙을 적용했습니다.
 
-- **파일 분리:** mobile.css(공통)와 desktop.css(미디어 쿼리)로 스타일시트를 분리하여, 디바이스별 스타일을 명확히 구분하고 관리 효율성을 높였습니다.
-- **시맨틱 마크업:** 무분별한 `<div>` 사용을 지양하고 `<section>, <article>, <dialog>, <nav>` 등을 사용하여 문서 구조의 의미를 명확히 전달했습니다. 만약 사용하더라도, CSS 스타일링의 유지보수성과 레이아웃의 안정성을 위해 `<div>` 래퍼 구조를 사용하였습니다.
+- **파일 분리:** custom.css(공통)와 responsive.css(미디어 쿼리)로 스타일시트를 분리하여, 디바이스별 스타일을 명확히 구분하고 관리 효율성을 높였습니다.
+- **체계적인 Z-Index 관리:** 'Magic Number'(9999, 10000 등) 사용을 지양하고, :root 변수에 레이어(Layer)별 위계를 정의하여 사용했습니다. 각 레이어 간격을 100단위(--z-fixed: 100, --z-modal: 1000)로 설정하여, 추후 요소가 추가되더라도 유연하게 대응할 수 있도록 설계했습니다.
 - **일관된 CSS 네이밍(Kebab-Case):** CSS 클래스명을 **케밥 케이스**로 통일하여 가독성을 높이고, 클래스명만으로도 요소의 역할과 관계를 유추할 수 있도록 작성했습니다.
 
 ```css
+/* Z-Index 위계 시스템 */
+:root {
+  --z-default: 1;
+  --z-content-priority: 50; /* 중요 콘텐츠 (겹침 방지) */
+  --z-fixed: 100;           /* 헤더 (Sticky) */
+  --z-nav: 500;             /* 모바일 메뉴 */
+  --z-modal: 1000;          /* 최상위 팝업 */
+}
+
+.subscribe {
+  z-index: var(--z-content-priority); /* 변수 기반 적용 */
+}
+
 /* Kebab-Case 적용 */
 .header-container {
   ...;
@@ -128,3 +141,35 @@ scrollTopBtn.addEventListener('click', () => {
   ...;
 }
 ```
+
+## VIEW
+
+반응형 디자인(Mobile & Desktop)의 주요 섹션별 구현 화면입니다.
+
+### 1. Hero Section
+
+| Mobile View | Desktop View |
+| --- | --- |
+| <img width="256" height="512" alt="image" src="https://github.com/user-attachments/assets/77261a32-4a37-4742-b22c-89f68c5033fc" /> | <img width="512" height="256" alt="image" src="https://github.com/user-attachments/assets/e569b149-2b55-4aa4-84db-1d51c848edea" /> |
+| **모바일:** 세로형 레이아웃 | **데스크탑:** 중앙 정렬 및 1:1 배치 |
+
+### 2. About Section
+
+| Mobile View | Desktop View |
+| --- | --- |
+| <img width="256" height="512" alt="image" src="https://github.com/user-attachments/assets/02d0d048-75fe-4835-95bf-11c5d8246926" /> | <img width="512" height="256" alt="image" src="https://github.com/user-attachments/assets/3209cec4-c122-48f0-8d59-a98316e2d576" /> |
+| **모바일:** 이미지 하단 텍스트 배치 | **데스크탑:** 이미지와 텍스트 수평 배치 |
+
+### 3. Gallery Section
+
+| Mobile View | Desktop View |
+| --- | --- |
+| <img width="256" height="512" alt="image" src="https://github.com/user-attachments/assets/24c603bc-6ad6-4297-9fda-865bc2837469" /> | <img width="512" height="256" alt="image" src="https://github.com/user-attachments/assets/fe3ccd98-83f2-4dba-bb52-d226872f7ef8" /> |
+| **모바일:** 가로 스크롤(Swipe) 인터랙션 | **데스크탑:** 그리드(Grid) 레이아웃 전환 |
+
+### 4. Subscribe Section (Footer)
+
+| Mobile View | Desktop View |
+| --- | --- |
+| <img width="256" height="512" alt="image" src="https://github.com/user-attachments/assets/37a28b1a-08e9-409b-8820-1b0a766f7917" /> | <img width="512" height="256" alt="image" src="https://github.com/user-attachments/assets/2884ec42-cb45-43f1-a3c3-f3ce2157f479" /> |
+| **모바일:** footer 그리드(Grid) 레이아웃 | **데스크탑:** footer 바로가기 섹션 안보이게 |
